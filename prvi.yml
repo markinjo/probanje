@@ -1,0 +1,13 @@
+---
+ - hosts: localhost
+   tasks:
+
+   - name: Izvrsavanje komande
+     shell: sh 1.sh
+     #args:
+      #chdir: /root/sh-ansibl
+     register: iz
+
+   - name: izlaz
+     debug:
+         msg: "{{iz.stdout_lines}}"
