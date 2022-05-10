@@ -1,9 +1,11 @@
 ---
  - hosts: localhost
+   vars_files: 
+     - varijable.yml
    tasks:
 
    - name: Izvrsavanje komande
-     shell: sh 1.sh
+     shell: sh {{promenljiva}}
      #args:
       #chdir: /root/sh-ansibl
      register: iz
