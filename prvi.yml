@@ -6,10 +6,14 @@
 
    - name: Izvrsavanje komande
      shell: sh {{promenljiva}}
-     #args:
-      #chdir: /root/sh-ansibl
+     args:
+      chdir: /root/sh-ansibl
      register: iz
 
    - name: izlaz
      debug:
          msg: "{{iz.stdout_lines}}"
+         
+   - name: Dodavanje
+     command: date
+     
